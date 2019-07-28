@@ -1,14 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">菜鸟驿站</router-link> |
+      <router-link to="/customer">用户预约</router-link>
     </div>
-    <router-view/>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
+
 <style lang="scss">
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,6 +20,7 @@
   text-align: center;
   color: #2c3e50;
 }
+
 #nav {
   padding: 30px;
   a {
